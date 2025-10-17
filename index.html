@@ -9,10 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
     <style>
         body { font-family: 'Poppins', sans-serif; }
         .hero-bg {
-            background-image: linear-gradient(to bottom, rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 1)), url('https://placehold.co/1920x1080/111827/334155?text=Arena+MLBB');
+            background-image: linear-gradient(to bottom, rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 1)), url('assets/images/loading.jpeg');
             background-size: cover;
             background-position: center;
         }
@@ -33,7 +37,9 @@
 
     <header id="header" class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700/50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-white">Push<span class="text-amber-400">Boss</span></a>
+            <a href="#" class="text-2xl font-bold text-white">
+                Push<span class="text-amber-400">Boss</span>
+            </a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#keunggulan" class="text-gray-300 hover:text-amber-400 transition-colors">Keunggulan</a>
                 <a href="#paket" class="text-gray-300 hover:text-amber-400 transition-colors">Paket Joki</a>
@@ -49,14 +55,7 @@
                 <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-4">Jasa Joki Mobile Legends Terpercaya & Cepat</h1>
                 <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">Naik Rank Tanpa Pusing, Dikerjakan oleh Pro Player! Gaskeun ke Mythic impianmu bersama kami.</p>
                 <div id="promo-section" class="mt-8">
-                     <p class="text-amber-400 font-semibold text-lg">PROMO SPESIAL BERAKHIR DALAM:</p>
-                     <div id="countdown-timer" class="flex justify-center gap-4 md:gap-8 mt-4 text-white">
-                         <div class="text-center bg-gray-800/50 p-4 rounded-lg min-w-[80px]"><span id="days" class="text-4xl font-bold">0</span><span class="block text-sm">Hari</span></div>
-                         <div class="text-center bg-gray-800/50 p-4 rounded-lg min-w-[80px]"><span id="hours" class="text-4xl font-bold">0</span><span class="block text-sm">Jam</span></div>
-                         <div class="text-center bg-gray-800/50 p-4 rounded-lg min-w-[80px]"><span id="minutes" class="text-4xl font-bold">0</span><span class="block text-sm">Menit</span></div>
-                         <div class="text-center bg-gray-800/50 p-4 rounded-lg min-w-[80px]"><span id="seconds" class="text-4xl font-bold">0</span><span class="block text-sm">Detik</span></div>
                      </div>
-                </div>
                 <a href="#paket" class="mt-12 bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-4 px-10 rounded-lg text-lg transition-transform hover:scale-105 inline-block">Lihat Paket Joki</a>
             </div>
         </section>
@@ -208,8 +207,8 @@
                 { name: 'Legend V → Mythic', price: '62.500', original_price: '250.000', days: '2-3', features: ['Win Rate & Statistik Aman', 'Cepat & Efisien', 'Prioritas Pengerjaan', 'Request Hero'], is_discounted: true },
                 { name: 'Mythic → Honor', price: '75.000', original_price: '300.000', days: '3-4', features: ['Win Rate & Statistik Aman', 'Cepat & Efisien', 'Prioritas Pengerjaan', 'Request Hero'], is_discounted: true },
                 { name: 'Honor → Glory', price: '112.500', original_price: '450.000', days: '4-5', features: ['Win Rate & Statistik Aman', 'Cepat & Efisien', 'Prioritas Pengerjaan', 'Request Hero'], is_discounted: true },
-                { name: 'Bintang: Mythic Glory', price: '20.000/Star', features: ['Win Rate & Statistik Aman', 'Cepat & Efisien', 'Prioritas Pengerjaan', 'Request Hero'] },
-                { name: 'Bintang: Mythical Immortal', price: '23.000/Star', features: ['Joki Profesional', 'Minimal 5 Bintang', 'Prioritas Pengerjaan', 'Request Hero'] },
+                { name: 'Bintang: Mythic Glory', price: '20.000', unit: 'Per Bintang', features: ['Win Rate & Statistik Aman', 'Cepat & Efisien', 'Prioritas Pengerjaan', 'Request Hero'] },
+                { name: 'Bintang: Mythical Immortal', price: '23.000', unit: 'Per Bintang', features: ['Joki Profesional', 'Minimal 5 Bintang', 'Prioritas Pengerjaan', 'Request Hero'] },
                 { name: 'Paket Custom', price: 'Hubungi Admin', days: 'Fleksibel', features: ['Win Rate & Statistik Aman', 'Cepat & Efisien', 'Prioritas Pengerjaan', 'Request Hero', 'Nego Harga', 'Sesuai Kebutuhan'] },
             ];
             
@@ -270,19 +269,37 @@
                 imgWrapper.innerHTML = `<img src="${testi.src}" alt="${testi.alt}" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300">`;
                 testimoniContainer.appendChild(imgWrapper);
             });
-
-            const countdownDate = new Date().setDate(new Date().getDate() + 5);
+            
+            // --- PERUBAHAN: TANGGAL PROMO DITETAPKAN ---
+            const promoSection = document.getElementById('promo-section');
+            const promoStartDate = new Date('2025-10-14T00:00:00').getTime();
+            const promoEndDate = new Date('2025-10-19T23:59:59').getTime();
+            
             let countdownInterval = setInterval(() => {
-                const distance = countdownDate - new Date().getTime();
-                if (distance < 0) {
+                const now = new Date().getTime();
+                
+                if (now < promoStartDate) {
+                    promoSection.innerHTML = `<p class="text-xl font-bold text-amber-400">PROMO SPESIAL AKAN DATANG!</p>`;
+                } else if (now > promoEndDate) {
+                    promoSection.innerHTML = `<p class="text-xl font-bold text-red-500">PROMO SUDAH BERAKHIR!</p>`;
                     clearInterval(countdownInterval);
-                    document.getElementById('promo-section').innerHTML = `<p class="text-red-500 font-bold text-xl">PROMO SUDAH BERAKHIR!</p>`;
-                    return;
+                } else {
+                    // Tampilkan countdown jika promo sedang berjalan
+                    promoSection.innerHTML = `
+                        <p class="text-amber-400 font-semibold text-lg">PROMO SPESIAL BERAKHIR DALAM:</p>
+                        <div id="countdown-timer" class="flex justify-center gap-4 md:gap-8 mt-4 text-white">
+                             <div class="text-center bg-gray-800/50 p-4 rounded-lg min-w-[80px]"><span id="days" class="text-4xl font-bold">0</span><span class="block text-sm">Hari</span></div>
+                             <div class="text-center bg-gray-800/50 p-4 rounded-lg min-w-[80px]"><span id="hours" class="text-4xl font-bold">0</span><span class="block text-sm">Jam</span></div>
+                             <div class="text-center bg-gray-800/50 p-4 rounded-lg min-w-[80px]"><span id="minutes" class="text-4xl font-bold">0</span><span class="block text-sm">Menit</span></div>
+                             <div class="text-center bg-gray-800/50 p-4 rounded-lg min-w-[80px]"><span id="seconds" class="text-4xl font-bold">0</span><span class="block text-sm">Detik</span></div>
+                        </div>`;
+                    
+                    const distance = promoEndDate - now;
+                    document.getElementById('days').innerText = String(Math.floor(distance / (600 * 60 * 60 * 24))).padStart(2, '0');
+                    document.getElementById('hours').innerText = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+                    document.getElementById('minutes').innerText = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+                    document.getElementById('seconds').innerText = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
                 }
-                document.getElementById('days').innerText = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
-                document.getElementById('hours').innerText = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
-                document.getElementById('minutes').innerText = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
-                document.getElementById('seconds').innerText = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
             }, 1000);
 
             const modal = document.getElementById('order-modal');
@@ -341,7 +358,7 @@
                     if (orderData.paket === PROMO_PACKAGE_NAME) {
                         const { count, error } = await supabaseClient.from('orders').select('*', { count: 'exact', head: true }).eq('paket', PROMO_PACKAGE_NAME);
                         if (error) throw new Error(`Supabase count error: ${error.message}`);
-                        if (count >= 3) { // Updated promo limit to 3
+                        if (count >= 3) {
                             alert('Maaf, kuota promo sudah habis!');
                             submitButton.disabled = false;
                             submitButton.textContent = 'Kirim Pesanan';
