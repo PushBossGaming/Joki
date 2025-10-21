@@ -1,252 +1,538 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PushBoss - Jasa Joki Mobile Legends Terpercaya & Cepat</title>
-    <link href="output.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
     <style>
-        body { font-family: 'Poppins', sans-serif; }
-        .hero-bg {
-            background-image: linear-gradient(to bottom, rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 1)), url('assets/images/loading.jpeg');
-            background-size: cover;
-            background-position: center;
-        }
-        .banner {
-            position: absolute;
-            top: -1px; right: -1px;
-            color: #ffffff;
-            padding: 4px 12px;
-            font-weight: bold; font-size: 0.875rem;
-            border-top-right-radius: 0.5rem;
-            border-bottom-left-radius: 0.5rem;
-        }
-        .promo-banner { background-color: #f59e0b; }
-        .discount-banner { background-color: #22c55e; }
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .hero-bg {
+        background-image:
+          linear-gradient(
+            to bottom,
+            rgba(17, 24, 39, 0.9),
+            rgba(17, 24, 39, 1)
+          ),
+          url("assets/images/loading.jpeg");
+        background-size: cover;
+        background-position: center;
+      }
+      .banner {
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        color: #ffffff;
+        padding: 4px 12px;
+        font-weight: bold;
+        font-size: 0.875rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+      }
+      .promo-banner {
+        background-color: #f59e0b;
+      }
+      .discount-banner {
+        background-color: #22c55e;
+      }
     </style>
-</head>
-<body class="bg-gray-900 text-gray-200">
-
-    <header id="header" class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700/50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-white">
-                Push<span class="text-amber-400">Boss</span>
-            </a>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#keunggulan" class="text-gray-300 hover:text-amber-400 transition-colors">Keunggulan</a>
-                <a href="#paket" class="text-gray-300 hover:text-amber-400 transition-colors">Paket Joki</a>
-                <a href="#testimoni" class="text-gray-300 hover:text-amber-400 transition-colors">Testimoni</a>
-            </div>
-            <a href="#paket" class="bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-2 px-6 rounded-lg transition-transform hover:scale-105">Pesan Sekarang</a>
-        </nav>
+  </head>
+  <body class="bg-gray-900 text-gray-200">
+    <header
+      id="header"
+      class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700/50"
+    >
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-bold text-white">
+          Push<span class="text-amber-400">Boss</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            href="#keunggulan"
+            class="text-gray-300 hover:text-amber-400 transition-colors"
+            >Keunggulan</a
+          >
+          <a
+            href="#paket"
+            class="text-gray-300 hover:text-amber-400 transition-colors"
+            >Paket Joki</a
+          >
+          <a
+            href="#testimoni"
+            class="text-gray-300 hover:text-amber-400 transition-colors"
+            >Testimoni</a
+          >
+        </div>
+        <a
+          href="#paket"
+          class="bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-2 px-6 rounded-lg transition-transform hover:scale-105"
+          >Pesan Sekarang</a
+        >
+      </nav>
     </header>
 
     <main>
-        <section class="hero-bg py-24 md:py-32">
-            <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-4">Jasa Joki Mobile Legends Terpercaya & Cepat</h1>
-                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">Naik Rank Tanpa Pusing, Dikerjakan oleh Pro Player! Gaskeun ke Mythic impianmu bersama kami.</p>
-                <div id="promo-section" class="mt-8">
-                     </div>
-                <a href="#paket" class="mt-12 bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-4 px-10 rounded-lg text-lg transition-transform hover:scale-105 inline-block">Lihat Paket Joki</a>
+      <section class="hero-bg py-24 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+          <h1
+            class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-4"
+          >
+            Jasa Joki Mobile Legends <br />
+            Terpercaya & Cepat
+          </h1>
+          <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Naik Rank Tanpa Pusing, Dikerjakan oleh Pro Player! Gaskeun ke
+            Mythic impianmu bersama kami.
+          </p>
+          <div id="promo-section" class="mt-8"></div>
+          <a
+            href="#paket"
+            class="mt-12 bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-4 px-10 rounded-lg text-lg transition-transform hover:scale-105 inline-block"
+            >Lihat Paket Joki</a
+          >
+        </div>
+      </section>
+
+      <section id="keunggulan" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">
+              Kenapa Memilih PushBoss?
+            </h2>
+            <p class="text-gray-400 mt-2">
+              Kami menawarkan lebih dari sekedar joki rank.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+              class="bg-gray-900 p-8 rounded-lg text-center border border-gray-700 hover:border-amber-400 transition-colors"
+            >
+              <div class="text-amber-400 text-5xl mb-4">⚡</div>
+              <h3 class="text-xl font-bold mb-2">Proses Cepat</h3>
+              <p class="text-gray-400">
+                Pesanan Anda langsung diproses setelah konfirmasi.
+              </p>
             </div>
-        </section>
-
-        <section id="keunggulan" class="py-20 bg-gray-800">
-             <div class="container mx-auto px-6">
-                 <div class="text-center mb-12">
-                     <h2 class="text-3xl md:text-4xl font-bold text-white">Kenapa Memilih PushBoss?</h2>
-                     <p class="text-gray-400 mt-2">Kami menawarkan lebih dari sekedar joki rank.</p>
-                 </div>
-                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                     <div class="bg-gray-900 p-8 rounded-lg text-center border border-gray-700 hover:border-amber-400 transition-colors">
-                         <div class="text-amber-400 text-5xl mb-4">⚡</div>
-                         <h3 class="text-xl font-bold mb-2">Proses Cepat</h3>
-                         <p class="text-gray-400">Pesanan Anda langsung diproses setelah konfirmasi.</p>
-                     </div>
-                     <div class="bg-gray-900 p-8 rounded-lg text-center border border-gray-700 hover:border-amber-400 transition-colors">
-                         <div class="text-amber-400 text-5xl mb-4">🛡️</div>
-                         <h3 class="text-xl font-bold mb-2">Aman & Anti-Hack</h3>
-                         <p class="text-gray-400">Kami menjamin 100% keamanan akun Anda.</p>
-                     </div>
-                     <div class="bg-gray-900 p-8 rounded-lg text-center border border-gray-700 hover:border-amber-400 transition-colors">
-                         <div class="text-amber-400 text-5xl mb-4">🏆</div>
-                         <h3 class="text-xl font-bold mb-2">Pro Player</h3>
-                         <p class="text-gray-400">Semua joki kami adalah pemain berpengalaman.</p>
-                     </div>
-                     <div class="bg-gray-900 p-8 rounded-lg text-center border border-gray-700 hover:border-amber-400 transition-colors">
-                         <div class="text-amber-400 text-5xl mb-4">💰</div>
-                         <h3 class="text-xl font-bold mb-2">Harga Terjangkau</h3>
-                         <p class="text-gray-400">Kualitas terbaik dengan harga yang bersaing.</p>
-                     </div>
-                 </div>
-             </div>
-        </section>
-
-        <section id="paket" class="py-20">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Katalog Paket Joki</h2>
-                    <p class="text-gray-400 mt-2">Pilih paket yang paling sesuai untuk push rank Anda.</p>
-                </div>
-                <div id="paket-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div
+              class="bg-gray-900 p-8 rounded-lg text-center border border-gray-700 hover:border-amber-400 transition-colors"
+            >
+              <div class="text-amber-400 text-5xl mb-4">🛡️</div>
+              <h3 class="text-xl font-bold mb-2">Aman & Anti-Hack</h3>
+              <p class="text-gray-400">
+                Kami menjamin 100% keamanan akun Anda.
+              </p>
             </div>
-        </section>
+            <div
+              class="bg-gray-900 p-8 rounded-lg text-center border border-gray-700 hover:border-amber-400 transition-colors"
+            >
+              <div class="text-amber-400 text-5xl mb-4">🏆</div>
+              <h3 class="text-xl font-bold mb-2">Pro Player</h3>
+              <p class="text-gray-400">
+                Semua joki kami adalah pemain berpengalaman.
+              </p>
+            </div>
+            <div
+              class="bg-gray-900 p-8 rounded-lg text-center border border-gray-700 hover:border-amber-400 transition-colors"
+            >
+              <div class="text-amber-400 text-5xl mb-4">💰</div>
+              <h3 class="text-xl font-bold mb-2">Harga Terjangkau</h3>
+              <p class="text-gray-400">
+                Kualitas terbaik dengan harga yang bersaing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section id="cara-pesan" class="py-20 bg-gray-800">
-         <div class="container mx-auto px-6">
-             <div class="text-center mb-12">
-                 <h2 class="text-3xl md:text-4xl font-bold text-white">Cara Pemesanan Sangat Mudah</h2>
-                 <p class="text-gray-400 mt-2">Hanya butuh 4 langkah sederhana!</p>
-             </div>
-             <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-4">
-                 <div class="text-center max-w-xs">
-                     <div class="bg-amber-500 text-gray-900 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
-                     <h3 class="text-xl font-semibold mb-2">Pilih Paket</h3><p class="text-gray-400">Pilih paket joki yang Anda inginkan.</p>
-                 </div><div class="hidden md:block h-1 w-20 bg-gray-700"></div>
-                 <div class="text-center max-w-xs">
-                     <div class="bg-amber-500 text-gray-900 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
-                     <h3 class="text-xl font-semibold mb-2">Isi Data</h3><p class="text-gray-400">Klik "Pesan" lalu isi data akun Anda.</p>
-                 </div><div class="hidden md:block h-1 w-20 bg-gray-700"></div>
-                 <div class="text-center max-w-xs">
-                     <div class="bg-amber-500 text-gray-900 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
-                     <h3 class="text-xl font-semibold mb-2">Pembayaran</h3><p class="text-gray-400">Lakukan pembayaran via instruksi admin.</p>
-                 </div><div class="hidden md:block h-1 w-20 bg-gray-700"></div>
-                 <div class="text-center max-w-xs">
-                     <div class="bg-amber-500 text-gray-900 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
-                     <h3 class="text-xl font-semibold mb-2">Proses Joki</h3><p class="text-gray-400">Santai dan tunggu akun Anda kami proses.</p>
-                 </div>
-             </div>
-         </div>
-        </section>
-        
-        <section id="testimoni" class="py-20">
-         <div class="container mx-auto px-6">
-             <div class="text-center mb-12">
-                 <h2 class="text-3xl md:text-4xl font-bold text-white">Testimoni Pelanggan</h2>
-                 <p class="text-gray-400 mt-2">Kepuasan mereka adalah bukti kualitas kami.</p>
-             </div>
-             <div id="testimoni-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
-         </div>
-        </section>
+      <section id="paket" class="py-20">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">
+              Katalog Paket Joki
+            </h2>
+            <p class="text-gray-400 mt-2">
+              Pilih paket yang paling sesuai untuk push rank Anda.
+            </p>
+          </div>
+          <div
+            id="paket-container"
+            class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          ></div>
+        </div>
+      </section>
+
+      <section id="cara-pesan" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">
+              Cara Pemesanan Sangat Mudah
+            </h2>
+            <p class="text-gray-400 mt-2">Hanya butuh 4 langkah sederhana!</p>
+          </div>
+          <div
+            class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-4"
+          >
+            <div class="text-center max-w-xs">
+              <div
+                class="bg-amber-500 text-gray-900 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4"
+              >
+                1
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Pilih Paket</h3>
+              <p class="text-gray-400">Pilih paket joki yang Anda inginkan.</p>
+            </div>
+            <div class="hidden md:block h-1 w-20 bg-gray-700"></div>
+            <div class="text-center max-w-xs">
+              <div
+                class="bg-amber-500 text-gray-900 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4"
+              >
+                2
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Isi Data</h3>
+              <p class="text-gray-400">Klik "Pesan" lalu isi data akun Anda.</p>
+            </div>
+            <div class="hidden md:block h-1 w-20 bg-gray-700"></div>
+            <div class="text-center max-w-xs">
+              <div
+                class="bg-amber-500 text-gray-900 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4"
+              >
+                3
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Pembayaran</h3>
+              <p class="text-gray-400">
+                Lakukan pembayaran via instruksi admin.
+              </p>
+            </div>
+            <div class="hidden md:block h-1 w-20 bg-gray-700"></div>
+            <div class="text-center max-w-xs">
+              <div
+                class="bg-amber-500 text-gray-900 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4"
+              >
+                4
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Proses Joki</h3>
+              <p class="text-gray-400">
+                Santai dan tunggu akun Anda kami proses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimoni" class="py-20">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">
+              Testimoni
+            </h2>
+            <p class="text-gray-400 mt-2">
+              Winstreak? sudah pasti karena Kepuasan mereka adalah prioritas kami.
+            </p>
+          </div>
+          <div
+            id="testimoni-container"
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+          ></div>
+          <div class="mt-6 w-full flex items-center justify-center">
+            <a
+                href="https://whatsapp.com/channel/0029VbBxLpcCXC3LqJPDPA35"
+                class="bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-3 px-6 rounded-lg transition-transform hover:scale-105 text-center">Lebih Banyak
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="bg-gray-800 border-t border-gray-700">
-        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
-            <p>&copy; 2025 PushBoss. Semua Hak Cipta Dilindungi.</p>
-            <p class="mt-2">Platform Joki Mobile Legends Profesional & Amanah</p>
-        </div>
+      <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+        <p>&copy; 2025 PushBoss. Semua Hak Cipta Dilindungi.</p>
+        <p class="mt-2">Platform Joki Mobile Legends Profesional & Amanah</p>
+      </div>
     </footer>
 
-    <div id="order-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 z-50 hidden">
-        <div class="bg-gray-800 rounded-lg shadow-xl w-full max-w-md p-8 relative">
-            <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl">&times;</button>
-            <div id="success-message" class="hidden text-center py-8">
-                <div class="text-green-400 text-6xl mb-4">✔</div>
-                <h2 class="text-2xl font-bold text-white mb-2">Pesanan Terkirim!</h2>
-                <p class="text-gray-400">Terima kasih! Admin kami akan segera menghubungi Anda melalui WhatsApp.</p>
-            </div>
-            <div id="form-container">
-                <h2 class="text-2xl font-bold text-white mb-2">Formulir Pemesanan</h2>
-                <p class="text-gray-400 mb-6">Lengkapi data di bawah untuk melanjutkan.</p>
-                <form id="order-form">
-                    <div class="mb-4">
-                        <label class="block text-gray-300 mb-2" for="paket-dipilih">Paket yang Dipilih</label>
-                        <input type="text" id="paket-dipilih" name="paket" class="w-full bg-gray-900 text-gray-400 border border-gray-600 rounded-lg px-4 py-2 cursor-not-allowed" readonly>
-                    </div>
-                    <div id="step-1">
-                        <div class="mb-4">
-                            <label class="block text-gray-300 mb-2" for="game-email">Email Akun Game</label>
-                            <input type="email" id="game-email" name="email" class="w-full bg-gray-700 text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-500" required>
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-gray-300 mb-2" for="game-password">Password Akun Game</label>
-                            <input type="password" id="game-password" name="password" class="w-full bg-gray-700 text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-500" required>
-                        </div>
-                        <div class="mt-6">
-                             <button type="button" id="next-btn" class="w-full bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-3 px-6 rounded-lg">Selanjutnya</button>
-                        </div>
-                    </div>
-                    <div id="step-2" class="hidden">
-                        <div class="mb-4">
-                            <label class="block text-gray-300 mb-2" for="whatsapp-number">Nomor WhatsApp Aktif</label>
-                            <input type="text" id="whatsapp-number" name="whatsapp" class="w-full bg-gray-700 text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Contoh: 08123456789" required>
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-gray-300 mb-2" for="catatan">Catatan (Opsional)</label>
-                            <textarea id="catatan" name="catatan" rows="2" class="w-full bg-gray-700 text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Misal: Hero favorit Fanny"></textarea>
-                        </div>
-                        <div class="mt-6 flex items-center gap-4">
-                             <button type="button" id="prev-btn" class="w-1/3 bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg">Kembali</button>
-                            <button type="submit" class="w-2/3 bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-3 px-6 rounded-lg">Kirim Pesanan</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+    <div
+      id="order-modal"
+      class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 z-50 hidden"
+    >
+      <div
+        class="bg-gray-800 rounded-lg shadow-xl w-full max-w-md p-8 relative"
+      >
+        <button
+          id="close-modal-btn"
+          class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl"
+        >
+          &times;
+        </button>
+        <div id="success-message" class="hidden text-center py-8">
+          <div class="text-green-400 text-6xl mb-4">✔</div>
+          <h2 class="text-2xl font-bold text-white mb-2">Pesanan Terkirim!</h2>
+          <p class="text-gray-400">
+            Terima kasih! Admin kami akan segera menghubungi Anda melalui
+            WhatsApp.
+          </p>
         </div>
+        <div id="form-container">
+          <h2 class="text-2xl font-bold text-white mb-2">Formulir Pemesanan</h2>
+          <p class="text-gray-400 mb-6">
+            Lengkapi data di bawah untuk melanjutkan.
+          </p>
+          <form id="order-form">
+            <div class="mb-4">
+              <label class="block text-gray-300 mb-2" for="paket-dipilih"
+                >Paket yang Dipilih</label
+              >
+              <input
+                type="text"
+                id="paket-dipilih"
+                name="paket"
+                class="w-full bg-gray-900 text-gray-400 border border-gray-600 rounded-lg px-4 py-2 cursor-not-allowed"
+                readonly
+              />
+            </div>
+            <div id="step-1">
+              <div class="mb-4">
+                <label class="block text-gray-300 mb-2" for="game-email"
+                  >Email Akun Game</label
+                >
+                <input
+                  type="email"
+                  id="game-email"
+                  name="email"
+                  class="w-full bg-gray-700 text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-300 mb-2" for="game-password"
+                  >Password Akun Game</label
+                >
+                <input
+                  type="password"
+                  id="game-password"
+                  name="password"
+                  class="w-full bg-gray-700 text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  required
+                />
+              </div>
+              <div class="mt-6">
+                <button
+                  type="button"
+                  id="next-btn"
+                  class="w-full bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-3 px-6 rounded-lg"
+                >
+                  Selanjutnya
+                </button>
+              </div>
+            </div>
+            <div id="step-2" class="hidden">
+              <div class="mb-4">
+                <label class="block text-gray-300 mb-2" for="whatsapp-number"
+                  >Nomor WhatsApp Aktif</label
+                >
+                <input
+                  type="text"
+                  id="whatsapp-number"
+                  name="whatsapp"
+                  class="w-full bg-gray-700 text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  placeholder="Contoh: 08123456789"
+                  required
+                />
+              </div>
+              <div class="mb-6">
+                <label class="block text-gray-300 mb-2" for="catatan"
+                  >Catatan (Opsional)</label
+                >
+                <textarea
+                  id="catatan"
+                  name="catatan"
+                  rows="2"
+                  class="w-full bg-gray-700 text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  placeholder="Misal: Hero favorit Fanny"
+                ></textarea>
+              </div>
+              <div class="mt-6 flex flex-col-reverse md:flex-row items-center gap-4">
+                <button
+                    type="button"
+                    id="prev-btn"
+                    class="w-full md:w-1/3 bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg"
+                    >
+                    Kembali
+                </button>
+                <button
+                    type="submit"
+                    class="w-full md:w-2/3 bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-3 px-6 rounded-lg"
+                    >
+                    Kirim
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            
-            const SUPABASE_URL = 'https://dvdeqpllldrrbjuxtidc.supabase.co';
-            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR2ZGVxcGxsbGRycmJqdXh0aWRjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA2NTU4ODEsImV4cCI6MjA3NjIzMTg4MX0.75XWL7vy2GlXVdQ0TUsH7pnpTo3trI2-6pFEElikcJs';
-            const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      document.addEventListener("DOMContentLoaded", function () {
+        const SUPABASE_URL = "https://dvdeqpllldrrbjuxtidc.supabase.co";
+        const SUPABASE_ANON_KEY =
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR2ZGVxcGxsbGRycmJqdXh0aWRjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA2NTU4ODEsImV4cCI6MjA3NjIzMTg4MX0.75XWL7vy2GlXVdQ0TUsH7pnpTo3trI2-6pFEElikcJs";
+        const supabaseClient = supabase.createClient(
+          SUPABASE_URL,
+          SUPABASE_ANON_KEY
+        );
 
-            const PROMO_PACKAGE_NAME = 'Epic V → Legend V';
-            const packages = [
-                { name: PROMO_PACKAGE_NAME, price: '0', original_price: '150.000', days: '1-2', features: ['Win Rate & Statistik Aman', 'Cepat & Efisien', 'Prioritas Pengerjaan', 'Request Hero'], is_promo: true, promo_note: 'Hanya untuk 3 Orang Pertama!' },
-                { name: 'Legend V → Mythic', price: '62.500', original_price: '250.000', days: '2-3', features: ['Win Rate & Statistik Aman', 'Cepat & Efisien', 'Prioritas Pengerjaan', 'Request Hero'], is_discounted: true },
-                { name: 'Mythic → Honor', price: '75.000', original_price: '300.000', days: '3-4', features: ['Win Rate & Statistik Aman', 'Cepat & Efisien', 'Prioritas Pengerjaan', 'Request Hero'], is_discounted: true },
-                { name: 'Honor → Glory', price: '112.500', original_price: '450.000', days: '4-5', features: ['Win Rate & Statistik Aman', 'Cepat & Efisien', 'Prioritas Pengerjaan', 'Request Hero'], is_discounted: true },
-                { name: 'Bintang: Mythic Glory', price: '20.000', unit: 'Per Bintang', features: ['Win Rate & Statistik Aman', 'Cepat & Efisien', 'Prioritas Pengerjaan', 'Request Hero'] },
-                { name: 'Bintang: Mythical Immortal', price: '23.000', unit: 'Per Bintang', features: ['Joki Profesional', 'Minimal 5 Bintang', 'Prioritas Pengerjaan', 'Request Hero'] },
-                { name: 'Paket Custom', price: 'Hubungi Admin', days: 'Fleksibel', features: ['Win Rate & Statistik Aman', 'Cepat & Efisien', 'Prioritas Pengerjaan', 'Request Hero', 'Nego Harga', 'Sesuai Kebutuhan'] },
-            ];
-            
-            const testimonials = [
-                { src: 'https://placehold.co/400x600/1F2937/FBBF24?text=Testimoni+1', alt: 'Testimoni 1' },
-                { src: 'https://placehold.co/400x600/1F2937/FBBF24?text=Testimoni+2', alt: 'Testimoni 2' },
-                { src: 'https://placehold.co/400x600/1F2937/FBBF24?text=Testimoni+3', alt: 'Testimoni 3' },
-                { src: 'https://placehold.co/400x600/1F2937/FBBF24?text=Testimoni+4', alt: 'Testimoni 4' },
-            ];
+        const PROMO_PACKAGE_NAME = "Epic V → Legend V";
+        const packages = [
+          {
+            name: PROMO_PACKAGE_NAME,
+            price: "0",
+            original_price: "Rp 150.000",
+            days: "1-2",
+            features: [
+              "Win Rate & Statistik Aman",
+              "Cepat & Efisien",
+              "Prioritas Pengerjaan",
+              "Request Hero",
+            ],
+            is_promo: true,
+            promo_note: "Hanya untuk 3 Orang Pertama!",
+          },
+          {
+            name: "Legend V → Mythic",
+            price: "Rp 62.500",
+            original_price: "Rp 250.000",
+            days: "2-3",
+            features: [
+              "Win Rate & Statistik Aman",
+              "Cepat & Efisien",
+              "Prioritas Pengerjaan",
+              "Request Hero",
+            ],
+            is_discounted: true,
+          },
+          {
+            name: "Mythic → Honor",
+            price: "Rp 75.000",
+            original_price: "Rp 300.000",
+            days: "3-4",
+            features: [
+              "Win Rate & Statistik Aman",
+              "Cepat & Efisien",
+              "Prioritas Pengerjaan",
+              "Request Hero",
+            ],
+            is_discounted: true,
+          },
+          {
+            name: "Honor → Glory",
+            price: "Rp 112.500",
+            original_price: "Rp 450.000",
+            days: "4-5",
+            features: [
+              "Win Rate & Statistik Aman",
+              "Cepat & Efisien",
+              "Prioritas Pengerjaan",
+              "Request Hero",
+            ],
+            is_discounted: true,
+          },
+          {
+            name: "Bintang: Mythic Glory",
+            price: "Rp 20.000",
+            unit: "Per Bintang",
+            features: [
+              "Win Rate & Statistik Aman",
+              "Cepat & Efisien",
+              "Prioritas Pengerjaan",
+              "Request Hero",
+            ],
+          },
+          {
+            name: "Bintang: Mythical Immortal",
+            price: "Rp 23.000",
+            unit: "Per Bintang",
+            features: [
+              "Joki Profesional",
+              "Minimal 5 Bintang",
+              "Prioritas Pengerjaan",
+              "Request Hero",
+            ],
+          },
+          {
+            name: "Paket Custom",
+            price:"Hubungi Admin",
+            days: "Fleksibel",
+            features: [
+              "Win Rate & Statistik Aman",
+              "Cepat & Efisien",
+              "Prioritas Pengerjaan",
+              "Request Hero",
+              "Nego Harga",
+              "Sesuai Kebutuhan",
+            ],
+          },
+        ];
 
-            const paketContainer = document.getElementById('paket-container');
-            packages.forEach(pkg => {
-                const card = document.createElement('div');
-                card.className = 'relative bg-gray-800 rounded-lg p-6 flex flex-col border-2 border-transparent hover:border-amber-400 transition-all duration-300 transform hover:-translate-y-1';
-                
-                let priceDisplay = `<span class="text-amber-400">Rp ${pkg.price}</span>`;
-                let bannerDisplay = '';
-                let promoNoteDisplay = '';
-                let timeUnitDisplay = '';
+        const testimonials = [
+          { src: "assets/images/testi.jpeg", alt: "Testimoni 1" },
+          { src: "assets/images/testi2.jpeg", alt: "Testimoni 2" },
+          { src: "assets/images/testi3.jpeg", alt: "Testimoni 3" },
+          { src: "assets/images/testi4.jpeg", alt: "Testimoni 4" },
+          { src: "assets/images/testi5.png", alt: "Testimoni 5" },
+          { src: "assets/images/testi6.png", alt: "Testimoni 6" },
+          { src: "assets/images/testi7.png", alt: "Testimoni 7" },
+          { src: "assets/images/testi8.png", alt: "Testimoni 8" },
+          { src: "assets/images/testi9.png", alt: "Testimoni 9" },
+          { src: "assets/images/testi10.png", alt: "Testimoni 10" },
+          { src: "assets/images/testi11.png", alt: "Testimoni 11" },
+          { src: "assets/images/testi12.png", alt: "Testimoni 12" },
+        ];
 
-                if (pkg.days) {
-                    timeUnitDisplay = `<p class="text-gray-400 mb-4">Estimasi: ${pkg.days} Hari</p>`;
-                } else if (pkg.unit) {
-                    timeUnitDisplay = `<p class="text-gray-400 mb-4">Harga ${pkg.unit}</p>`;
-                }
+        const paketContainer = document.getElementById("paket-container");
+        packages.forEach((pkg) => {
+          const card = document.createElement("div");
+          card.className =
+            "relative bg-gray-800 rounded-lg p-6 flex flex-col border-2 border-transparent hover:border-amber-400 transition-all duration-300 transform hover:-translate-y-1";
 
-                if (pkg.is_promo) {
-                    priceDisplay = `<span class="text-green-400">GRATIS</span> <span class="text-xl text-gray-500 line-through">Rp ${pkg.original_price}</span>`;
-                    bannerDisplay = '<div class="banner promo-banner">PROMO</div>';
-                    if (pkg.promo_note) {
-                        promoNoteDisplay = `<p class="text-sm text-amber-400 -mt-2 mb-4">${pkg.promo_note}</p>`;
-                    }
-                } else if (pkg.is_discounted) {
-                    priceDisplay = `<span class="text-amber-400">Rp ${pkg.price}</span> <span class="text-xl text-gray-500 line-through">Rp ${pkg.original_price}</span>`;
-                    bannerDisplay = '<div class="banner discount-banner">DISKON 75%</div>';
-                }
+          let priceDisplay = `<span class="text-amber-400"> ${pkg.price}</span>`;
+          let bannerDisplay = "";
+          let promoNoteDisplay = "";
+          let timeUnitDisplay = "";
 
-                card.innerHTML = `
+          if (pkg.days) {
+            timeUnitDisplay = `<p class="text-gray-400 mb-4">Estimasi: ${pkg.days} Hari</p>`;
+          } else if (pkg.unit) {
+            timeUnitDisplay = `<p class="text-gray-400 mb-4">Harga ${pkg.unit}</p>`;
+          }
+
+          if (pkg.is_promo) {
+            priceDisplay = `<span class="text-green-400">GRATIS</span> <span class="text-xl text-gray-500 line-through"> ${pkg.original_price}</span>`;
+            bannerDisplay = '<div class="banner promo-banner">PROMO</div>';
+            if (pkg.promo_note) {
+              promoNoteDisplay = `<p class="text-sm text-amber-400 -mt-2 mb-4">${pkg.promo_note}</p>`;
+            }
+          } else if (pkg.is_discounted) {
+            priceDisplay = `<span class="text-amber-400"> ${pkg.price}</span> <span class="text-xl text-gray-500 line-through"> ${pkg.original_price}</span>`;
+            bannerDisplay =
+              '<div class="banner discount-banner">DISKON 75%</div>';
+          }
+
+          card.innerHTML = `
                     ${bannerDisplay}
                     <div class="flex-grow">
                         <h3 class="text-2xl font-bold text-white">${pkg.name}</h3>
@@ -254,38 +540,40 @@
                         ${promoNoteDisplay}
                         ${timeUnitDisplay}
                         <ul class="text-gray-300 space-y-2">
-                            ${pkg.features.map(f => `<li class="flex items-center"><span class="text-green-400 mr-2">✔</span>${f}</li>`).join('')}
+                            ${pkg.features.map((f) => `<li class="flex items-center"><span class="text-green-400 mr-2">✔</span>${f}</li>`).join("")}
                         </ul>
                     </div>
                     <button data-paket="${pkg.name}" class="order-btn mt-6 w-full bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-3 px-6 rounded-lg">Pesan Sekarang</button>
                 `;
-                paketContainer.appendChild(card);
-            });
+          paketContainer.appendChild(card);
+        });
 
-            const testimoniContainer = document.getElementById('testimoni-container');
-            testimonials.forEach(testi => {
-                const imgWrapper = document.createElement('div');
-                imgWrapper.className = 'overflow-hidden rounded-lg shadow-lg';
-                imgWrapper.innerHTML = `<img src="${testi.src}" alt="${testi.alt}" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300">`;
-                testimoniContainer.appendChild(imgWrapper);
-            });
-            
-            // --- PERUBAHAN: TANGGAL PROMO DITETAPKAN ---
-            const promoSection = document.getElementById('promo-section');
-            const promoStartDate = new Date('2025-10-14T00:00:00').getTime();
-            const promoEndDate = new Date('2025-10-19T23:59:59').getTime();
-            
-            let countdownInterval = setInterval(() => {
-                const now = new Date().getTime();
-                
-                if (now < promoStartDate) {
-                    promoSection.innerHTML = `<p class="text-xl font-bold text-amber-400">PROMO SPESIAL AKAN DATANG!</p>`;
-                } else if (now > promoEndDate) {
-                    promoSection.innerHTML = `<p class="text-xl font-bold text-red-500">PROMO SUDAH BERAKHIR!</p>`;
-                    clearInterval(countdownInterval);
-                } else {
-                    // Tampilkan countdown jika promo sedang berjalan
-                    promoSection.innerHTML = `
+        const testimoniContainer = document.getElementById(
+          "testimoni-container"
+        );
+        testimonials.forEach((testi) => {
+          const imgWrapper = document.createElement("div");
+          imgWrapper.className = "overflow-hidden rounded-lg shadow-lg";
+          imgWrapper.innerHTML = `<img src="${testi.src}" alt="${testi.alt}" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300">`;
+          testimoniContainer.appendChild(imgWrapper);
+        });
+
+        // --- PERUBAHAN: TANGGAL PROMO DITETAPKAN ---
+        const promoSection = document.getElementById("promo-section");
+        const promoStartDate = new Date("2025-10-14T00:00:00").getTime();
+        const promoEndDate = new Date("2025-10-23T23:59:59").getTime();
+
+        let countdownInterval = setInterval(() => {
+          const now = new Date().getTime();
+
+          if (now < promoStartDate) {
+            promoSection.innerHTML = `<p class="text-xl font-bold text-amber-400">PROMO SPESIAL AKAN DATANG!</p>`;
+          } else if (now > promoEndDate) {
+            promoSection.innerHTML = `<p class="text-xl font-bold text-red-500">PROMO SUDAH BERAKHIR!</p>`;
+            clearInterval(countdownInterval);
+          } else {
+            // Tampilkan countdown jika promo sedang berjalan
+            promoSection.innerHTML = `
                         <p class="text-amber-400 font-semibold text-lg">PROMO SPESIAL BERAKHIR DALAM:</p>
                         <div id="countdown-timer" class="flex justify-center gap-4 md:gap-8 mt-4 text-white">
                              <div class="text-center bg-gray-800/50 p-4 rounded-lg min-w-[80px]"><span id="days" class="text-4xl font-bold">0</span><span class="block text-sm">Hari</span></div>
@@ -293,104 +581,132 @@
                              <div class="text-center bg-gray-800/50 p-4 rounded-lg min-w-[80px]"><span id="minutes" class="text-4xl font-bold">0</span><span class="block text-sm">Menit</span></div>
                              <div class="text-center bg-gray-800/50 p-4 rounded-lg min-w-[80px]"><span id="seconds" class="text-4xl font-bold">0</span><span class="block text-sm">Detik</span></div>
                         </div>`;
-                    
-                    const distance = promoEndDate - now;
-                    document.getElementById('days').innerText = String(Math.floor(distance / (600 * 60 * 60 * 24))).padStart(2, '0');
-                    document.getElementById('hours').innerText = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
-                    document.getElementById('minutes').innerText = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
-                    document.getElementById('seconds').innerText = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
-                }
-            }, 1000);
 
-            const modal = document.getElementById('order-modal');
-            const formContainer = document.getElementById('form-container');
-            const successMessage = document.getElementById('success-message');
-            const orderForm = document.getElementById('order-form');
-            const step1 = document.getElementById('step-1');
-            const step2 = document.getElementById('step-2');
+            const distance = promoEndDate - now;
+            document.getElementById("days").innerText = String(
+              Math.floor(distance / (1000 * 60 * 60 * 24))
+            ).padStart(2, "0");
+            document.getElementById("hours").innerText = String(
+              Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+            ).padStart(2, "0");
+            document.getElementById("minutes").innerText = String(
+              Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+            ).padStart(2, "0");
+            document.getElementById("seconds").innerText = String(
+              Math.floor((distance % (1000 * 60)) / 1000)
+            ).padStart(2, "0");
+          }
+        }, 1000);
 
-            const openModal = (paketName) => {
-                document.getElementById('paket-dipilih').value = paketName;
-                modal.classList.remove('hidden');
-                document.documentElement.classList.add('overflow-hidden');
-            };
+        const modal = document.getElementById("order-modal");
+        const formContainer = document.getElementById("form-container");
+        const successMessage = document.getElementById("success-message");
+        const orderForm = document.getElementById("order-form");
+        const step1 = document.getElementById("step-1");
+        const step2 = document.getElementById("step-2");
 
-            const closeModal = () => {
-                modal.classList.add('hidden');
-                document.documentElement.classList.remove('overflow-hidden');
-                setTimeout(() => {
-                    formContainer.classList.remove('hidden');
-                    successMessage.classList.add('hidden');
-                    orderForm.reset();
-                    step1.classList.remove('hidden');
-                    step2.classList.add('hidden');
-                    orderForm.querySelector('button[type="submit"]').disabled = false;
-                    orderForm.querySelector('button[type="submit"]').textContent = 'Kirim Pesanan';
-                }, 300);
-            };
+        const openModal = (paketName) => {
+          document.getElementById("paket-dipilih").value = paketName;
+          modal.classList.remove("hidden");
+          document.documentElement.classList.add("overflow-hidden");
+        };
 
-            document.querySelectorAll('.order-btn').forEach(btn => btn.addEventListener('click', (e) => openModal(e.target.getAttribute('data-paket'))));
-            document.getElementById('close-modal-btn').addEventListener('click', closeModal);
-            modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+        const closeModal = () => {
+          modal.classList.add("hidden");
+          document.documentElement.classList.remove("overflow-hidden");
+          setTimeout(() => {
+            formContainer.classList.remove("hidden");
+            successMessage.classList.add("hidden");
+            orderForm.reset();
+            step1.classList.remove("hidden");
+            step2.classList.add("hidden");
+            orderForm.querySelector('button[type="submit"]').disabled = false;
+            orderForm.querySelector('button[type="submit"]').textContent =
+              "kirim";
+          }, 300);
+        };
 
-            document.getElementById('next-btn').addEventListener('click', () => {
-                if (document.getElementById('game-email').checkValidity() && document.getElementById('game-password').checkValidity()) {
-                    step1.classList.add('hidden');
-                    step2.classList.remove('hidden');
-                } else {
-                    orderForm.reportValidity();
-                }
-            });
-            document.getElementById('prev-btn').addEventListener('click', () => {
-                step2.classList.add('hidden');
-                step1.classList.remove('hidden');
-            });
-
-            orderForm.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                const submitButton = this.querySelector('button[type="submit"]');
-                submitButton.disabled = true;
-                submitButton.textContent = 'Memeriksa...';
-
-                const orderData = Object.fromEntries(new FormData(orderForm).entries());
-                
-                try {
-                    if (orderData.paket === PROMO_PACKAGE_NAME) {
-                        const { count, error } = await supabaseClient.from('orders').select('*', { count: 'exact', head: true }).eq('paket', PROMO_PACKAGE_NAME);
-                        if (error) throw new Error(`Supabase count error: ${error.message}`);
-                        if (count >= 3) {
-                            alert('Maaf, kuota promo sudah habis!');
-                            submitButton.disabled = false;
-                            submitButton.textContent = 'Kirim Pesanan';
-                            return;
-                        }
-                    }
-
-                    submitButton.textContent = 'Mengirim...';
-                    
-                    const { error } = await supabaseClient.from('orders').insert([
-                        { 
-                            paket: orderData.paket,
-                            email: orderData.email,
-                            password: orderData.password,
-                            whatsapp: orderData.whatsapp,
-                            catatan: orderData.catatan
-                        }
-                    ]);
-
-                    if (error) throw new Error(`Supabase insert error: ${error.message}`);
-
-                    formContainer.classList.add('hidden');
-                    successMessage.classList.remove('hidden');
-
-                } catch (error) {
-                    console.error('Submission error:', error);
-                    alert(`Gagal mengirim pesanan. Silakan coba lagi.`);
-                    submitButton.disabled = false;
-                    submitButton.textContent = 'Kirim Pesanan';
-                }
-            });
+        document
+          .querySelectorAll(".order-btn")
+          .forEach((btn) =>
+            btn.addEventListener("click", (e) =>
+              openModal(e.target.getAttribute("data-paket"))
+            )
+          );
+        document
+          .getElementById("close-modal-btn")
+          .addEventListener("click", closeModal);
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) closeModal();
         });
+
+        document.getElementById("next-btn").addEventListener("click", () => {
+          if (
+            document.getElementById("game-email").checkValidity() &&
+            document.getElementById("game-password").checkValidity()
+          ) {
+            step1.classList.add("hidden");
+            step2.classList.remove("hidden");
+          } else {
+            orderForm.reportValidity();
+          }
+        });
+        document.getElementById("prev-btn").addEventListener("click", () => {
+          step2.classList.add("hidden");
+          step1.classList.remove("hidden");
+        });
+
+        orderForm.addEventListener("submit", async function (e) {
+          e.preventDefault();
+          const submitButton = this.querySelector('button[type="submit"]');
+          submitButton.disabled = true;
+          submitButton.textContent = "Memeriksa...";
+
+          const orderData = Object.fromEntries(
+            new FormData(orderForm).entries()
+          );
+
+          try {
+            if (orderData.paket === PROMO_PACKAGE_NAME) {
+              const { count, error } = await supabaseClient
+                .from("orders")
+                .select("*", { count: "exact", head: true })
+                .eq("paket", PROMO_PACKAGE_NAME);
+              if (error)
+                throw new Error(`Supabase count error: ${error.message}`);
+              if (count >= 3) {
+                alert("Maaf, kuota promo sudah habis!");
+                submitButton.disabled = false;
+                submitButton.textContent = "kirim";
+                return;
+              }
+            }
+
+            submitButton.textContent = "Mengirim...";
+ 
+            const { error } = await supabaseClient.from("orders").insert([
+              {
+                paket: orderData.paket,
+                email: orderData.email,
+                password: orderData.password,
+                whatsapp: orderData.whatsapp,
+                catatan: orderData.catatan,
+              },
+            ]);
+
+            if (error)
+              throw new Error(`Supabase insert error: ${error.message}`);
+
+            formContainer.classList.add("hidden");
+            successMessage.classList.remove("hidden");
+          } catch (error) {
+            console.error("Submission error:", error);
+            alert(`Gagal mengirim pesanan. Silakan coba lagi.`);
+            submitButton.disabled = false;
+            submitButton.textContent = "kirim";
+          }
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
